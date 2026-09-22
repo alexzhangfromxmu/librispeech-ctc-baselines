@@ -1,0 +1,7 @@
+_base_: bilstm_ctc.yaml
+
+experiment:
+  name: bilstm_ctc_100h_100epoch
+
+training:
+  epochs: 100
