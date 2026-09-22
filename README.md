@@ -5,6 +5,8 @@ LibriSpeech scripts. It provides character-level BiLSTM-CTC,
 Transformer-CTC, and Mamba-2-CTC architectures while sharing one data pipeline, trainer,
 evaluation path, configuration system, and reproducibility policy.
 
+## The analysis of the visualization results is presented in model_comparison_analysis.ipynb.
+
 ## Directory responsibilities
 
 - `network/`: acoustic models and the model registry.
