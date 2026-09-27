@@ -1,0 +1,7 @@
+_base_: transformer_ctc.yaml
+
+experiment:
+  name: transformer_ctc_100h_100epoch
+
+training:
+  epochs: 100

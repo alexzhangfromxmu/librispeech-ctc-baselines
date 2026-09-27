@@ -1,0 +1,54 @@
+experiment:
+  name: librispeech_ctc
+  seed: 7
+  deterministic: true
+  deterministic_warn_only: true
+
+data:
+  root: null
+  train_split: train-clean-100
+  dev_split: dev-clean
+  full_train: true
+  full_dev: true
+  train_hours: 1.0
+  num_dev: 200
+  min_duration: 1.0
+  max_duration: 20.0
+  train_manifest: null
+  dev_manifest: null
+  cache_features: true
+  batch_size: 8
+  num_workers: 0
+  pin_memory: true
+
+features:
+  sample_rate: 16000
+  n_fft: 400
+  win_length: 400
+  hop_length: 160
+  n_mels: 80
+  normalize: true
+
+model:
+  name: bilstm_ctc
+  conv_channels: 128
+
+training:
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip: 5.0
+  early_stopping_patience: 7
+  log_every: 500
+  amp: true
+  amp_dtype: float16
+  scheduler:
+    name: reduce_on_plateau
+    factor: 0.5
+    patience: 2
+    min_lr: 0.00001
+  resume_from: null
+
+output:
+  runs_root: runs
+  log_root: log

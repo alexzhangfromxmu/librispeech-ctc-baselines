@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local datasets
+data/
+LibriSpeech/
+*.flac
+
+# Training and evaluation artifacts
+log/*
+!log/.gitkeep
+runs/*
+!runs/.gitkeep
+analysis_outputs/
+
+*.pt
+*.pth
+*.ckpt
+*.out
+*.err
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
